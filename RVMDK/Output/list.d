@@ -1,0 +1,12 @@
+.\Output\list.o: ..\FreeRTOS\Source\list.c
+.\Output\list.o: D:\keil\ARM\RV31\INC\stdlib.h
+.\Output\list.o: ..\FreeRTOS\Source\include\FreeRTOS.h
+.\Output\list.o: D:\keil\ARM\RV31\INC\stddef.h
+.\Output\list.o: D:\keil\ARM\RV31\INC\stdint.h
+.\Output\list.o: ..\RVMDK\FreeRTOSConfig.h
+.\Output\list.o: ..\FreeRTOS\Source\include\projdefs.h
+.\Output\list.o: ..\FreeRTOS\Source\include\portable.h
+.\Output\list.o: ..\FreeRTOS\Source\include\deprecated_definitions.h
+.\Output\list.o: ..\FreeRTOS\Source\portable\RVDS\ARM_CM3\portmacro.h
+.\Output\list.o: ..\FreeRTOS\Source\include\mpu_wrappers.h
+.\Output\list.o: ..\FreeRTOS\Source\include\list.h

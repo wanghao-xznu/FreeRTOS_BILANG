@@ -1,0 +1,599 @@
+<html>
+<body>
+<pre>
+<h1>礦ision Build Log</h1>
+<h2>Project:</h2>
+C:\Users\wh\Desktop\比郎\FreeRTOS for BILANG\RVMDK\Project.uvproj
+Project File Date:  04/24/2016
+
+<h2>Output:</h2>
+Build target 'Project'
+creating preprocessor file for UART.c...
+compiling UART.c...
+linking...
+Program Size: Code=12652 RO-data=336 RW-data=136 ZI-data=18632  
+FromELF: creating hex file...
+".\Output\Project.axf" - 0 Error(s), 0 Warning(s).
+Build target 'Project'
+creating preprocessor file for main.c...
+compiling main.c...
+..\User\main.c(47): error:  #20: identifier "Receive_Timer" is undefined
+..\User\main.c:       Receive_Timer = xTimerCreate((const char*)"ReceiveTimer",\
+..\User\main.c:       ^
+..\User\main.c(47): warning:  #223-D: function "xTimerCreate" declared implicitly
+..\User\main.c:       Receive_Timer = xTimerCreate((const char*)"ReceiveTimer",\
+..\User\main.c:                       ^
+..\User\main.c(48): error:  #20: identifier "Receive_TimeOut" is undefined
+..\User\main.c:                           2000 / portTICK_RATE_MS, pdFALSE, NULL, Receive_TimeOut);
+..\User\main.c:                                                                   ^
+..\User\main.c(65): error:  #20: identifier "TimerHandle_t" is undefined
+..\User\main.c:   void Receive_TimeOut(xTimerHandle handle)
+..\User\main.c:                        ^
+..\User\main.c(262): warning:  #223-D: function "xTimerStart" declared implicitly
+..\User\main.c:         xTimerStart(Receive_Timer, 0);
+..\User\main.c:         ^
+..\User\main.c(262): error:  #20: identifier "Receive_Timer" is undefined
+..\User\main.c:         xTimerStart(Receive_Timer, 0);
+..\User\main.c:                     ^
+..\User\main.c: ..\User\main.c: 2 warnings, 4 errors
+creating preprocessor file for list.c...
+compiling list.c...
+creating preprocessor file for queue.c...
+compiling queue.c...
+creating preprocessor file for tasks.c...
+compiling tasks.c...
+creating preprocessor file for timers.c...
+compiling timers.c...
+creating preprocessor file for port.c...
+compiling port.c...
+creating preprocessor file for heap_2.c...
+compiling heap_2.c...
+Target not created
+Build target 'Project'
+creating preprocessor file for main.c...
+compiling main.c...
+..\User\main.c(34): error:  #20: identifier "TimerHandle_t" is undefined
+..\User\main.c:   xTimerHandle ADC_CollectTimer = NULL;
+..\User\main.c:   ^
+..\User\main.c(48): error:  #20: identifier "Receive_Timer" is undefined
+..\User\main.c:       Receive_Timer = xTimerCreate((const char*)"ReceiveTimer",\
+..\User\main.c:       ^
+..\User\main.c(48): warning:  #223-D: function "xTimerCreate" declared implicitly
+..\User\main.c:       Receive_Timer = xTimerCreate((const char*)"ReceiveTimer",\
+..\User\main.c:                       ^
+..\User\main.c(49): error:  #20: identifier "Receive_TimeOut" is undefined
+..\User\main.c:                           2000 / portTICK_RATE_MS, pdFALSE, NULL, Receive_TimeOut);
+..\User\main.c:                                                                   ^
+..\User\main.c(66): error:  #20: identifier "TimerHandle_t" is undefined
+..\User\main.c:   void Receive_TimeOut(xTimerHandle handle)
+..\User\main.c:                        ^
+..\User\main.c(263): warning:  #223-D: function "xTimerStart" declared implicitly
+..\User\main.c:         xTimerStart(Receive_Timer, 0);
+..\User\main.c:         ^
+..\User\main.c(263): error:  #20: identifier "Receive_Timer" is undefined
+..\User\main.c:         xTimerStart(Receive_Timer, 0);
+..\User\main.c:                     ^
+..\User\main.c: ..\User\main.c: 2 warnings, 5 errors
+Target not created
+Build target 'Project'
+creating preprocessor file for main.c...
+compiling main.c...
+..\User\main.c(34): error:  #20: identifier "TimerHandle_t" is undefined
+..\User\main.c:   xTimerHandle Receive_Timer = NULL;
+..\User\main.c:   ^
+..\User\main.c(48): warning:  #223-D: function "xTimerCreate" declared implicitly
+..\User\main.c:       Receive_Timer = xTimerCreate((const char*)"ReceiveTimer",\
+..\User\main.c:                       ^
+..\User\main.c(49): error:  #20: identifier "Receive_TimeOut" is undefined
+..\User\main.c:                           2000 / portTICK_RATE_MS, pdFALSE, NULL, Receive_TimeOut);
+..\User\main.c:                                                                   ^
+..\User\main.c(66): error:  #20: identifier "TimerHandle_t" is undefined
+..\User\main.c:   void Receive_TimeOut(xTimerHandle handle)
+..\User\main.c:                        ^
+..\User\main.c(263): warning:  #223-D: function "xTimerStart" declared implicitly
+..\User\main.c:         xTimerStart(Receive_Timer, 0);
+..\User\main.c:         ^
+..\User\main.c: ..\User\main.c: 2 warnings, 3 errors
+Target not created
+Build target 'Project'
+creating preprocessor file for main.c...
+compiling main.c...
+..\User\main.c(50): error:  #20: identifier "Receive_TimeOut" is undefined
+..\User\main.c:                           2000 / portTICK_RATE_MS, pdFALSE, NULL, Receive_TimeOut);
+..\User\main.c:                                                                   ^
+..\User\main.c: ..\User\main.c: 0 warnings, 1 error
+Target not created
+Build target 'Project'
+creating preprocessor file for main.c...
+compiling main.c...
+linking...
+Program Size: Code=13948 RO-data=336 RW-data=156 ZI-data=18676  
+FromELF: creating hex file...
+".\Output\Project.axf" - 0 Error(s), 0 Warning(s).
+Load "C:\\Users\\wh\\Desktop\\比郎\\FreeRTOS for BILANG\\RVMDK\\Output\\Project.AXF" 
+Set JLink Project File to "C:\Users\wh\Desktop\比郎\FreeRTOS for BILANG\RVMDK\JLinkSettings.ini"
+ 
+JLink info:
+------------
+DLL: V4.15n, compiled Jun 18 2010 19:55:09
+Firmware: J-Link ARM V8 compiled May 20 2010 17:07:46
+Hardware: V8.00
+S/N : 99999994 
+Feature(s) : RDI,FlashDL,FlashBP,JFlash,GDBFULL 
+ 
+* JLink Info: TotalIRLen = 9, IRPrint = 0x0011
+* JLink Info: Found Cortex-M3 r1p1, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info:   FPUnit: 6 code (BP) slots and 2 literal slots
+ROMTableAddr = 0xE00FF003
+ 
+Target info:
+------------
+Device: STM32F103ZE
+VTarget = 3.287V
+State of Pins: 
+TCK: 1, TDI: 0, TDO: 1, TMS: 0, TRES: 1, TRST: 1
+* JLink Info: TotalIRLen = 9, IRPrint = 0x0011
+* JLink Info: Found Cortex-M3 r1p1, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info:   FPUnit: 6 code (BP) slots and 2 literal slots
+Hardware-Breakpoints: 6
+Software-Breakpoints: 2048
+Watchpoints:          4
+JTAG speed: 2000 kHz
+ 
+Erase Done.
+Programming Done.
+Verify OK.
+* JLink Info: TotalIRLen = 9, IRPrint = 0x0011
+* JLink Info: Found Cortex-M3 r1p1, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info:   FPUnit: 6 code (BP) slots and 2 literal slots
+Application running ...
+Build target 'Project'
+creating preprocessor file for main.c...
+compiling main.c...
+linking...
+Program Size: Code=13948 RO-data=336 RW-data=156 ZI-data=18676  
+FromELF: creating hex file...
+".\Output\Project.axf" - 0 Error(s), 0 Warning(s).
+Load "C:\\Users\\wh\\Desktop\\比郎\\FreeRTOS for BILANG\\RVMDK\\Output\\Project.AXF" 
+Set JLink Project File to "C:\Users\wh\Desktop\比郎\FreeRTOS for BILANG\RVMDK\JLinkSettings.ini"
+ 
+JLink info:
+------------
+DLL: V4.15n, compiled Jun 18 2010 19:55:09
+Firmware: J-Link ARM V8 compiled May 20 2010 17:07:46
+Hardware: V8.00
+S/N : 99999994 
+Feature(s) : RDI,FlashDL,FlashBP,JFlash,GDBFULL 
+ 
+* JLink Info: TotalIRLen = 9, IRPrint = 0x0011
+* JLink Info: Found Cortex-M3 r1p1, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info:   FPUnit: 6 code (BP) slots and 2 literal slots
+ROMTableAddr = 0xE00FF003
+ 
+Target info:
+------------
+Device: STM32F103ZE
+VTarget = 3.287V
+State of Pins: 
+TCK: 1, TDI: 0, TDO: 1, TMS: 0, TRES: 1, TRST: 1
+* JLink Info: TotalIRLen = 9, IRPrint = 0x0011
+* JLink Info: Found Cortex-M3 r1p1, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info:   FPUnit: 6 code (BP) slots and 2 literal slots
+Hardware-Breakpoints: 6
+Software-Breakpoints: 2048
+Watchpoints:          4
+JTAG speed: 2000 kHz
+ 
+Erase Done.
+Programming Done.
+Verify OK.
+* JLink Info: TotalIRLen = 9, IRPrint = 0x0011
+* JLink Info: Found Cortex-M3 r1p1, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info:   FPUnit: 6 code (BP) slots and 2 literal slots
+Application running ...
+Build target 'Project'
+creating preprocessor file for UART.c...
+..\FreeRTOS\Source\include\timers.h(75): error:  #35: #error directive: "include FreeRTOS.h must appear in source files before include timers.h"
+..\FreeRTOS\Source\include\timers.h:    #error "include FreeRTOS.h must appear in source files before include timers.h"
+..\FreeRTOS\Source\include\timers.h:     ^
+..\FreeRTOS\Source\include\timers.h: ..\User\UART.c: 0 warnings, 1 error
+compiling UART.c...
+..\FreeRTOS\Source\include\timers.h(75): error:  #35: #error directive: "include FreeRTOS.h must appear in source files before include timers.h"
+..\FreeRTOS\Source\include\timers.h:    #error "include FreeRTOS.h must appear in source files before include timers.h"
+..\FreeRTOS\Source\include\timers.h:     ^
+..\FreeRTOS\Source\include\timers.h: ..\User\UART.c: 0 warnings, 1 error
+Target not created
+Build target 'Project'
+creating preprocessor file for UART.c...
+compiling UART.c...
+linking...
+Program Size: Code=14048 RO-data=336 RW-data=160 ZI-data=18736  
+FromELF: creating hex file...
+".\Output\Project.axf" - 0 Error(s), 0 Warning(s).
+Build target 'Project'
+creating preprocessor file for main.c...
+compiling main.c...
+creating preprocessor file for UART.c...
+compiling UART.c...
+linking...
+Program Size: Code=14048 RO-data=336 RW-data=160 ZI-data=18736  
+FromELF: creating hex file...
+".\Output\Project.axf" - 0 Error(s), 0 Warning(s).
+Build target 'Project'
+creating preprocessor file for main.c...
+compiling main.c...
+creating preprocessor file for UART.c...
+compiling UART.c...
+linking...
+Program Size: Code=14048 RO-data=336 RW-data=160 ZI-data=18736  
+FromELF: creating hex file...
+".\Output\Project.axf" - 0 Error(s), 0 Warning(s).
+Build target 'Project'
+creating preprocessor file for main.c...
+compiling main.c...
+linking...
+Program Size: Code=14024 RO-data=336 RW-data=160 ZI-data=18736  
+FromELF: creating hex file...
+".\Output\Project.axf" - 0 Error(s), 0 Warning(s).
+Build target 'Project'
+creating preprocessor file for main.c...
+compiling main.c...
+linking...
+Program Size: Code=14024 RO-data=336 RW-data=160 ZI-data=18736  
+FromELF: creating hex file...
+".\Output\Project.axf" - 0 Error(s), 0 Warning(s).
+Build target 'Project'
+creating preprocessor file for UART.c...
+compiling UART.c...
+linking...
+Program Size: Code=13960 RO-data=336 RW-data=160 ZI-data=18736  
+FromELF: creating hex file...
+".\Output\Project.axf" - 0 Error(s), 0 Warning(s).
+Build target 'Project'
+creating preprocessor file for main.c...
+compiling main.c...
+linking...
+Program Size: Code=13932 RO-data=336 RW-data=160 ZI-data=18736  
+FromELF: creating hex file...
+".\Output\Project.axf" - 0 Error(s), 0 Warning(s).
+Load "C:\\Users\\wh\\Desktop\\比郎\\FreeRTOS for BILANG\\RVMDK\\Output\\Project.AXF" 
+Set JLink Project File to "C:\Users\wh\Desktop\比郎\FreeRTOS for BILANG\RVMDK\JLinkSettings.ini"
+ 
+JLink info:
+------------
+DLL: V4.15n, compiled Jun 18 2010 19:55:09
+Firmware: J-Link ARM V8 compiled May 20 2010 17:07:46
+Hardware: V8.00
+S/N : 99999994 
+Feature(s) : RDI,FlashDL,FlashBP,JFlash,GDBFULL 
+ 
+* JLink Info: TotalIRLen = 9, IRPrint = 0x0011
+* JLink Info: Found Cortex-M3 r1p1, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info:   FPUnit: 6 code (BP) slots and 2 literal slots
+ROMTableAddr = 0xE00FF003
+ 
+Target info:
+------------
+Device: STM32F103ZE
+VTarget = 3.287V
+State of Pins: 
+TCK: 1, TDI: 0, TDO: 1, TMS: 0, TRES: 1, TRST: 1
+* JLink Info: TotalIRLen = 9, IRPrint = 0x0011
+* JLink Info: Found Cortex-M3 r1p1, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info:   FPUnit: 6 code (BP) slots and 2 literal slots
+Hardware-Breakpoints: 6
+Software-Breakpoints: 2048
+Watchpoints:          4
+JTAG speed: 2000 kHz
+ 
+Erase Done.
+Programming Done.
+Verify OK.
+* JLink Info: TotalIRLen = 9, IRPrint = 0x0011
+* JLink Info: Found Cortex-M3 r1p1, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info:   FPUnit: 6 code (BP) slots and 2 literal slots
+Application running ...
+Build target 'Project'
+creating preprocessor file for main.c...
+compiling main.c...
+linking...
+Program Size: Code=13928 RO-data=336 RW-data=160 ZI-data=18736  
+FromELF: creating hex file...
+".\Output\Project.axf" - 0 Error(s), 0 Warning(s).
+Load "C:\\Users\\wh\\Desktop\\比郎\\FreeRTOS for BILANG\\RVMDK\\Output\\Project.AXF" 
+Set JLink Project File to "C:\Users\wh\Desktop\比郎\FreeRTOS for BILANG\RVMDK\JLinkSettings.ini"
+ 
+JLink info:
+------------
+DLL: V4.15n, compiled Jun 18 2010 19:55:09
+Firmware: J-Link ARM V8 compiled May 20 2010 17:07:46
+Hardware: V8.00
+S/N : 99999994 
+Feature(s) : RDI,FlashDL,FlashBP,JFlash,GDBFULL 
+ 
+* JLink Info: TotalIRLen = 9, IRPrint = 0x0011
+* JLink Info: Found Cortex-M3 r1p1, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info:   FPUnit: 6 code (BP) slots and 2 literal slots
+ROMTableAddr = 0xE00FF003
+ 
+Target info:
+------------
+Device: STM32F103ZE
+VTarget = 3.287V
+State of Pins: 
+TCK: 1, TDI: 0, TDO: 1, TMS: 0, TRES: 1, TRST: 1
+* JLink Info: TotalIRLen = 9, IRPrint = 0x0011
+* JLink Info: Found Cortex-M3 r1p1, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info:   FPUnit: 6 code (BP) slots and 2 literal slots
+Hardware-Breakpoints: 6
+Software-Breakpoints: 2048
+Watchpoints:          4
+JTAG speed: 2000 kHz
+ 
+Erase Done.
+Programming Done.
+Verify OK.
+* JLink Info: TotalIRLen = 9, IRPrint = 0x0011
+* JLink Info: Found Cortex-M3 r1p1, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info:   FPUnit: 6 code (BP) slots and 2 literal slots
+Application running ...
+Build target 'Project'
+creating preprocessor file for main.c...
+compiling main.c...
+..\User\main.c(72): error:  #20: identifier "index_receive" is undefined
+..\User\main.c:         index_receive = 0;
+..\User\main.c:         ^
+..\User\main.c(73): error:  #20: identifier "USART_RX_BUF" is undefined
+..\User\main.c:         memset(USART_RX_BUF,0,USART_REC_LEN*sizeof(char));
+..\User\main.c:                ^
+..\User\main.c: ..\User\main.c: 0 warnings, 2 errors
+Target not created
+Build target 'Project'
+creating preprocessor file for main.c...
+compiling main.c...
+..\User\main.c(72): error:  #20: identifier "index_receive" is undefined
+..\User\main.c:         index_receive = 0;
+..\User\main.c:         ^
+..\User\main.c: ..\User\main.c: 0 warnings, 1 error
+creating preprocessor file for UART.c...
+compiling UART.c...
+Target not created
+Build target 'Project'
+creating preprocessor file for main.c...
+compiling main.c...
+creating preprocessor file for UART.c...
+compiling UART.c...
+linking...
+Program Size: Code=13980 RO-data=336 RW-data=160 ZI-data=18736  
+FromELF: creating hex file...
+".\Output\Project.axf" - 0 Error(s), 0 Warning(s).
+Build target 'Project'
+creating preprocessor file for main.c...
+compiling main.c...
+..\User\main.c(73): error:  #142: expression must have pointer-to-object type
+..\User\main.c:         USART_REC_LEN[index_receive] = '\0';
+..\User\main.c:                       ^
+..\User\main.c(74): warning:  #181-D: argument is incompatible with corresponding format string conversion
+..\User\main.c:         printf("\r\n =========line = %d======%s====\r\n",__LINE__,USART_REC_LEN);
+..\User\main.c:                                                                   ^
+..\User\main.c: ..\User\main.c: 1 warning, 1 error
+Target not created
+Build target 'Project'
+creating preprocessor file for main.c...
+compiling main.c...
+..\User\main.c(73): error:  #142: expression must have pointer-to-object type
+..\User\main.c:         USART_REC_LEN[index_receive] = 0;
+..\User\main.c:                       ^
+..\User\main.c(74): warning:  #181-D: argument is incompatible with corresponding format string conversion
+..\User\main.c:         printf("\r\n =========line = %d======%s====\r\n",__LINE__,USART_REC_LEN);
+..\User\main.c:                                                                   ^
+..\User\main.c: ..\User\main.c: 1 warning, 1 error
+Target not created
+Build target 'Project'
+creating preprocessor file for main.c...
+compiling main.c...
+..\User\main.c(74): warning:  #181-D: argument is incompatible with corresponding format string conversion
+..\User\main.c:         printf("\r\n =========line = %d======%s====\r\n",__LINE__,USART_REC_LEN);
+..\User\main.c:                                                                   ^
+..\User\main.c: ..\User\main.c: 1 warning, 0 errors
+linking...
+Program Size: Code=13992 RO-data=336 RW-data=160 ZI-data=18736  
+FromELF: creating hex file...
+".\Output\Project.axf" - 0 Error(s), 1 Warning(s).
+Build target 'Project'
+creating preprocessor file for main.c...
+compiling main.c...
+..\User\main.c(73): error:  #142: expression must have pointer-to-object type
+..\User\main.c:         USART_REC_LEN[index_receive] = 'a';
+..\User\main.c:                       ^
+..\User\main.c(74): warning:  #181-D: argument is incompatible with corresponding format string conversion
+..\User\main.c:         printf("\r\n =========line = %d======%s====\r\n",__LINE__,USART_REC_LEN);
+..\User\main.c:                                                                   ^
+..\User\main.c: ..\User\main.c: 1 warning, 1 error
+Target not created
+Build target 'Project'
+creating preprocessor file for main.c...
+compiling main.c...
+..\User\main.c(73): error:  #142: expression must have pointer-to-object type
+..\User\main.c:         USART_REC_LEN[index_receive] = (char)'\0';
+..\User\main.c:                       ^
+..\User\main.c(74): warning:  #181-D: argument is incompatible with corresponding format string conversion
+..\User\main.c:         printf("\r\n =========line = %d======%s====\r\n",__LINE__,USART_REC_LEN);
+..\User\main.c:                                                                   ^
+..\User\main.c: ..\User\main.c: 1 warning, 1 error
+Target not created
+Build target 'Project'
+creating preprocessor file for main.c...
+compiling main.c...
+..\User\main.c(73): error:  #142: expression must have pointer-to-object type
+..\User\main.c:         USART_REC_LEN[8] = '\0';
+..\User\main.c:                       ^
+..\User\main.c(74): warning:  #181-D: argument is incompatible with corresponding format string conversion
+..\User\main.c:         printf("\r\n =========line = %d======%s====\r\n",__LINE__,USART_REC_LEN);
+..\User\main.c:                                                                   ^
+..\User\main.c: ..\User\main.c: 1 warning, 1 error
+Target not created
+Build target 'Project'
+creating preprocessor file for main.c...
+compiling main.c...
+..\User\main.c(75): warning:  #181-D: argument is incompatible with corresponding format string conversion
+..\User\main.c:         printf("\r\n =========line = %d======%s====\r\n",__LINE__,USART_REC_LEN);
+..\User\main.c:                                                                   ^
+..\User\main.c(73): warning:  #177-D: variable "c" was declared but never referenced
+..\User\main.c:         char c='\0';
+..\User\main.c:              ^
+..\User\main.c: ..\User\main.c: 2 warnings, 0 errors
+linking...
+Program Size: Code=13992 RO-data=336 RW-data=160 ZI-data=18736  
+FromELF: creating hex file...
+".\Output\Project.axf" - 0 Error(s), 2 Warning(s).
+Build target 'Project'
+creating preprocessor file for main.c...
+compiling main.c...
+..\User\main.c(76): error:  #142: expression must have pointer-to-object type
+..\User\main.c:         USART_REC_LEN[index_receive] = '\0';
+..\User\main.c:                       ^
+..\User\main.c(77): warning:  #181-D: argument is incompatible with corresponding format string conversion
+..\User\main.c:         printf("\r\n =========line = %d======%s====\r\n",__LINE__,USART_REC_LEN);
+..\User\main.c:                                                                   ^
+..\User\main.c: ..\User\main.c: 1 warning, 1 error
+creating preprocessor file for UART.c...
+compiling UART.c...
+Target not created
+Build target 'Project'
+creating preprocessor file for main.c...
+compiling main.c...
+..\User\main.c(77): warning:  #181-D: argument is incompatible with corresponding format string conversion
+..\User\main.c:         printf("\r\n =========line = %d======%s====\r\n",__LINE__,USART_REC_LEN);
+..\User\main.c:                                                                   ^
+..\User\main.c: ..\User\main.c: 1 warning, 0 errors
+linking...
+Program Size: Code=14000 RO-data=336 RW-data=160 ZI-data=18736  
+FromELF: creating hex file...
+".\Output\Project.axf" - 0 Error(s), 1 Warning(s).
+Build target 'Project'
+creating preprocessor file for main.c...
+compiling main.c...
+linking...
+Program Size: Code=14000 RO-data=336 RW-data=160 ZI-data=18736  
+FromELF: creating hex file...
+".\Output\Project.axf" - 0 Error(s), 0 Warning(s).
+Load "C:\\Users\\wh\\Desktop\\比郎\\FreeRTOS for BILANG\\RVMDK\\Output\\Project.AXF" 
+Set JLink Project File to "C:\Users\wh\Desktop\比郎\FreeRTOS for BILANG\RVMDK\JLinkSettings.ini"
+ 
+JLink info:
+------------
+DLL: V4.15n, compiled Jun 18 2010 19:55:09
+Firmware: J-Link ARM V8 compiled May 20 2010 17:07:46
+Hardware: V8.00
+S/N : 99999994 
+Feature(s) : RDI,FlashDL,FlashBP,JFlash,GDBFULL 
+ 
+* JLink Info: TotalIRLen = 9, IRPrint = 0x0011
+* JLink Info: Found Cortex-M3 r1p1, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info:   FPUnit: 6 code (BP) slots and 2 literal slots
+ROMTableAddr = 0xE00FF003
+ 
+Target info:
+------------
+Device: STM32F103ZE
+VTarget = 3.287V
+State of Pins: 
+TCK: 1, TDI: 0, TDO: 1, TMS: 0, TRES: 1, TRST: 1
+* JLink Info: TotalIRLen = 9, IRPrint = 0x0011
+* JLink Info: Found Cortex-M3 r1p1, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info:   FPUnit: 6 code (BP) slots and 2 literal slots
+Hardware-Breakpoints: 6
+Software-Breakpoints: 2048
+Watchpoints:          4
+JTAG speed: 2000 kHz
+ 
+Erase Done.
+Programming Done.
+Verify OK.
+* JLink Info: TotalIRLen = 9, IRPrint = 0x0011
+* JLink Info: Found Cortex-M3 r1p1, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info:   FPUnit: 6 code (BP) slots and 2 literal slots
+Application running ...
+Build target 'Project'
+creating preprocessor file for main.c...
+compiling main.c...
+creating preprocessor file for UART.c...
+compiling UART.c...
+linking...
+Program Size: Code=14092 RO-data=336 RW-data=164 ZI-data=18740  
+FromELF: creating hex file...
+".\Output\Project.axf" - 0 Error(s), 0 Warning(s).
+Load "C:\\Users\\wh\\Desktop\\比郎\\FreeRTOS for BILANG\\RVMDK\\Output\\Project.AXF" 
+Set JLink Project File to "C:\Users\wh\Desktop\比郎\FreeRTOS for BILANG\RVMDK\JLinkSettings.ini"
+ 
+JLink info:
+------------
+DLL: V4.15n, compiled Jun 18 2010 19:55:09
+Firmware: J-Link ARM V8 compiled May 20 2010 17:07:46
+Hardware: V8.00
+S/N : 99999994 
+Feature(s) : RDI,FlashDL,FlashBP,JFlash,GDBFULL 
+ 
+* JLink Info: TotalIRLen = 9, IRPrint = 0x0011
+* JLink Info: Found Cortex-M3 r1p1, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info:   FPUnit: 6 code (BP) slots and 2 literal slots
+ROMTableAddr = 0xE00FF003
+ 
+Target info:
+------------
+Device: STM32F103ZE
+VTarget = 3.287V
+State of Pins: 
+TCK: 1, TDI: 0, TDO: 1, TMS: 0, TRES: 1, TRST: 1
+* JLink Info: TotalIRLen = 9, IRPrint = 0x0011
+* JLink Info: Found Cortex-M3 r1p1, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info:   FPUnit: 6 code (BP) slots and 2 literal slots
+Hardware-Breakpoints: 6
+Software-Breakpoints: 2048
+Watchpoints:          4
+JTAG speed: 2000 kHz
+ 
+Erase Done.
+Programming Done.
+Verify OK.
+* JLink Info: TotalIRLen = 9, IRPrint = 0x0011
+* JLink Info: Found Cortex-M3 r1p1, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info:   FPUnit: 6 code (BP) slots and 2 literal slots
+Application running ...

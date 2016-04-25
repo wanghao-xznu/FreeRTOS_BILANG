@@ -1,0 +1,12 @@
+.\Output\port.o: ..\FreeRTOS\Source\portable\RVDS\ARM_CM3\port.c
+.\Output\port.o: ..\FreeRTOS\Source\include\FreeRTOS.h
+.\Output\port.o: D:\keil\ARM\RV31\INC\stddef.h
+.\Output\port.o: D:\keil\ARM\RV31\INC\stdint.h
+.\Output\port.o: ..\RVMDK\FreeRTOSConfig.h
+.\Output\port.o: ..\FreeRTOS\Source\include\projdefs.h
+.\Output\port.o: ..\FreeRTOS\Source\include\portable.h
+.\Output\port.o: ..\FreeRTOS\Source\include\deprecated_definitions.h
+.\Output\port.o: ..\FreeRTOS\Source\portable\RVDS\ARM_CM3\portmacro.h
+.\Output\port.o: ..\FreeRTOS\Source\include\mpu_wrappers.h
+.\Output\port.o: ..\FreeRTOS\Source\include\task.h
+.\Output\port.o: ..\FreeRTOS\Source\include\list.h

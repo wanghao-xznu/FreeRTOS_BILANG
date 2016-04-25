@@ -1,0 +1,15 @@
+.\Output\queue.o: ..\FreeRTOS\Source\queue.c
+.\Output\queue.o: D:\keil\ARM\RV31\INC\stdlib.h
+.\Output\queue.o: D:\keil\ARM\RV31\INC\string.h
+.\Output\queue.o: ..\FreeRTOS\Source\include\FreeRTOS.h
+.\Output\queue.o: D:\keil\ARM\RV31\INC\stddef.h
+.\Output\queue.o: D:\keil\ARM\RV31\INC\stdint.h
+.\Output\queue.o: ..\RVMDK\FreeRTOSConfig.h
+.\Output\queue.o: ..\FreeRTOS\Source\include\projdefs.h
+.\Output\queue.o: ..\FreeRTOS\Source\include\portable.h
+.\Output\queue.o: ..\FreeRTOS\Source\include\deprecated_definitions.h
+.\Output\queue.o: ..\FreeRTOS\Source\portable\RVDS\ARM_CM3\portmacro.h
+.\Output\queue.o: ..\FreeRTOS\Source\include\mpu_wrappers.h
+.\Output\queue.o: ..\FreeRTOS\Source\include\task.h
+.\Output\queue.o: ..\FreeRTOS\Source\include\list.h
+.\Output\queue.o: ..\FreeRTOS\Source\include\queue.h
