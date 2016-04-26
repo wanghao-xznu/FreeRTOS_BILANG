@@ -145,7 +145,7 @@ void RCC_Configuration(void)
     FLASH_PrefetchBufferCmd(FLASH_PrefetchBuffer_Enable);
 
     /* PLLCLK = 8MHz * 9 = 72 MHz */
-    RCC_PLLConfig(RCC_PLLSource_HSE_Div1, RCC_PLLMul_9);
+    //RCC_PLLConfig(RCC_PLLSource_HSE_Div1, RCC_PLLMul_9);
 
     /* Enable PLL */ 
     RCC_PLLCmd(ENABLE);

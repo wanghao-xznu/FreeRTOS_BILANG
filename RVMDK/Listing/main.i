@@ -184,10 +184,16 @@ typedef enum IRQn
 
 #line 296 "..\\Libraries\\CMSIS\\CM3\\DeviceSupport\\ST\\STM32F10x\\stm32f10x.h"
 
+#line 341 "..\\Libraries\\CMSIS\\CM3\\DeviceSupport\\ST\\STM32F10x\\stm32f10x.h"
+
+#line 381 "..\\Libraries\\CMSIS\\CM3\\DeviceSupport\\ST\\STM32F10x\\stm32f10x.h"
+
+#line 426 "..\\Libraries\\CMSIS\\CM3\\DeviceSupport\\ST\\STM32F10x\\stm32f10x.h"
+
 
   ADC1_2_IRQn                 = 18,      
-  USB_HP_CAN1_TX_IRQn         = 19,      
-  USB_LP_CAN1_RX0_IRQn        = 20,      
+  CAN1_TX_IRQn                = 19,      
+  CAN1_RX0_IRQn               = 20,      
   CAN1_RX1_IRQn               = 21,      
   CAN1_SCE_IRQn               = 22,      
   EXTI9_5_IRQn                = 23,      
@@ -209,14 +215,7 @@ typedef enum IRQn
   USART3_IRQn                 = 39,      
   EXTI15_10_IRQn              = 40,      
   RTCAlarm_IRQn               = 41,      
-  USBWakeUp_IRQn              = 42,      
-  TIM8_BRK_IRQn               = 43,      
-  TIM8_UP_IRQn                = 44,      
-  TIM8_TRG_COM_IRQn           = 45,      
-  TIM8_CC_IRQn                = 46,      
-  ADC3_IRQn                   = 47,      
-  FSMC_IRQn                   = 48,      
-  SDIO_IRQn                   = 49,      
+  OTG_FS_WKUP_IRQn            = 42,      
   TIM5_IRQn                   = 50,      
   SPI3_IRQn                   = 51,      
   UART4_IRQn                  = 52,      
@@ -226,21 +225,23 @@ typedef enum IRQn
   DMA2_Channel1_IRQn          = 56,      
   DMA2_Channel2_IRQn          = 57,      
   DMA2_Channel3_IRQn          = 58,      
-  DMA2_Channel4_5_IRQn        = 59       
+  DMA2_Channel4_IRQn          = 59,      
+  DMA2_Channel5_IRQn          = 60,      
+  ETH_IRQn                    = 61,      
+  ETH_WKUP_IRQn               = 62,      
+  CAN2_TX_IRQn                = 63,      
+  CAN2_RX0_IRQn               = 64,      
+  CAN2_RX1_IRQn               = 65,      
+  CAN2_SCE_IRQn               = 66,      
+  OTG_FS_IRQn                 = 67       
 
-
-#line 381 "..\\Libraries\\CMSIS\\CM3\\DeviceSupport\\ST\\STM32F10x\\stm32f10x.h"
-
-#line 426 "..\\Libraries\\CMSIS\\CM3\\DeviceSupport\\ST\\STM32F10x\\stm32f10x.h"
-
-#line 472 "..\\Libraries\\CMSIS\\CM3\\DeviceSupport\\ST\\STM32F10x\\stm32f10x.h"
 } IRQn_Type;
 
 
 
  
 
-#line 1 "D:\\keil\\ARM\\RV31\\INC\\core_cm3.h"
+#line 1 "..\\Libraries\\CMSIS\\CM3\\CoreSupport\\core_cm3.h"
  
 
 
@@ -330,7 +331,7 @@ typedef enum IRQn
 
 
 
-#line 1 "D:\\keil\\ARM\\RV31\\INC\\stdint.h"
+#line 1 "C:\\Keil_v5\\ARM\\ARMCC\\Bin\\..\\include\\stdint.h"
  
  
 
@@ -348,9 +349,21 @@ typedef enum IRQn
 
 
 
-#line 25 "D:\\keil\\ARM\\RV31\\INC\\stdint.h"
+     
+#line 27 "C:\\Keil_v5\\ARM\\ARMCC\\Bin\\..\\include\\stdint.h"
+     
 
 
+
+
+
+
+
+
+
+
+
+#line 46 "C:\\Keil_v5\\ARM\\ARMCC\\Bin\\..\\include\\stdint.h"
 
 
 
@@ -402,32 +415,17 @@ typedef unsigned           int uint_fast32_t;
 typedef unsigned       __int64 uint_fast64_t;
 
      
+
+
+
+
 typedef   signed           int intptr_t;
 typedef unsigned           int uintptr_t;
 
-     
-typedef   signed       __int64 intmax_t;
-typedef unsigned       __int64 uintmax_t;
-
-
-
 
      
-
-     
-
-
-
-
-
-     
-
-
-
-
-
-     
-
+typedef   signed     long long intmax_t;
+typedef unsigned     long long uintmax_t;
 
 
 
@@ -477,6 +475,46 @@ typedef unsigned       __int64 uintmax_t;
      
 
 
+
+
+
+     
+
+
+
+
+
+     
+
+
+
+
+
+     
+
+     
+
+
+
+
+
+
+     
+
+
+
+
+
+
+     
+
+
+
+
+
+
+     
+
      
 
 
@@ -485,16 +523,11 @@ typedef unsigned       __int64 uintmax_t;
 
      
 
-     
-
 
      
 
-
      
-
-
-     
+#line 216 "C:\\Keil_v5\\ARM\\ARMCC\\Bin\\..\\include\\stdint.h"
 
      
 
@@ -504,7 +537,7 @@ typedef unsigned       __int64 uintmax_t;
 
 
 
-     
+
 
 
      
@@ -513,7 +546,7 @@ typedef unsigned       __int64 uintmax_t;
 
 
 
-#line 196 "D:\\keil\\ARM\\RV31\\INC\\stdint.h"
+#line 241 "C:\\Keil_v5\\ARM\\ARMCC\\Bin\\..\\include\\stdint.h"
 
      
 
@@ -546,25 +579,7 @@ typedef unsigned       __int64 uintmax_t;
 
 
 
-#line 260 "D:\\keil\\ARM\\RV31\\INC\\stdint.h"
-
-
-
- 
-
-
-#line 91 "D:\\keil\\ARM\\RV31\\INC\\core_cm3.h"
-
-
-
-
-
-
-
-
-
-
-
+#line 305 "C:\\Keil_v5\\ARM\\ARMCC\\Bin\\..\\include\\stdint.h"
 
 
 
@@ -572,8 +587,27 @@ typedef unsigned       __int64 uintmax_t;
 
 
  
+#line 91 "..\\Libraries\\CMSIS\\CM3\\CoreSupport\\core_cm3.h"
 
-#line 117 "D:\\keil\\ARM\\RV31\\INC\\core_cm3.h"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+#line 117 "..\\Libraries\\CMSIS\\CM3\\CoreSupport\\core_cm3.h"
 
 
 
@@ -987,7 +1021,7 @@ typedef struct
    
 
 
-#line 614 "D:\\keil\\ARM\\RV31\\INC\\core_cm3.h"
+#line 614 "..\\Libraries\\CMSIS\\CM3\\CoreSupport\\core_cm3.h"
 
 
 
@@ -1089,9 +1123,9 @@ typedef struct
 
 
  
-#line 721 "D:\\keil\\ARM\\RV31\\INC\\core_cm3.h"
+#line 721 "..\\Libraries\\CMSIS\\CM3\\CoreSupport\\core_cm3.h"
 
-#line 728 "D:\\keil\\ARM\\RV31\\INC\\core_cm3.h"
+#line 728 "..\\Libraries\\CMSIS\\CM3\\CoreSupport\\core_cm3.h"
 
 
 
@@ -1109,7 +1143,7 @@ typedef struct
 
 
 
-#line 758 "D:\\keil\\ARM\\RV31\\INC\\core_cm3.h"
+#line 758 "..\\Libraries\\CMSIS\\CM3\\CoreSupport\\core_cm3.h"
 
 
  
@@ -1120,7 +1154,7 @@ typedef struct
 
 
 
-#line 783 "D:\\keil\\ARM\\RV31\\INC\\core_cm3.h"
+#line 783 "..\\Libraries\\CMSIS\\CM3\\CoreSupport\\core_cm3.h"
 
 
  
@@ -1189,7 +1223,7 @@ extern uint32_t __REV16(uint16_t value);
 extern int32_t __REVSH(int16_t value);
 
 
-#line 933 "D:\\keil\\ARM\\RV31\\INC\\core_cm3.h"
+#line 933 "..\\Libraries\\CMSIS\\CM3\\CoreSupport\\core_cm3.h"
 
 
 
@@ -1306,7 +1340,7 @@ static __inline void __set_CONTROL(uint32_t control)
 
 
 
-#line 1445 "D:\\keil\\ARM\\RV31\\INC\\core_cm3.h"
+#line 1445 "..\\Libraries\\CMSIS\\CM3\\CoreSupport\\core_cm3.h"
 
 
 
@@ -2029,9 +2063,9 @@ typedef struct
   volatile uint32_t FA1R;
   uint32_t  RESERVED5[8];
 
-  CAN_FilterRegister_TypeDef sFilterRegister[14];
 
 
+  CAN_FilterRegister_TypeDef sFilterRegister[28];
 
 } CAN_TypeDef;
 
@@ -2385,8 +2419,8 @@ typedef struct
   volatile uint32_t CSR;
 
 
-
-
+  volatile uint32_t AHBRSTR;
+  volatile uint32_t CFGR2;
 
 
 
@@ -2912,14 +2946,19 @@ typedef struct
 
 
 
-#line 1850 "..\\Libraries\\CMSIS\\CM3\\DeviceSupport\\ST\\STM32F10x\\stm32f10x.h"
 
 
 
 
-#line 1870 "..\\Libraries\\CMSIS\\CM3\\DeviceSupport\\ST\\STM32F10x\\stm32f10x.h"
+
+
+
+#line 1794 "..\\Libraries\\CMSIS\\CM3\\DeviceSupport\\ST\\STM32F10x\\stm32f10x.h"
+ 
 
  
+ 
+
 
 
 
@@ -3113,6 +3152,48 @@ typedef struct
 
    
 #line 2178 "..\\Libraries\\CMSIS\\CM3\\DeviceSupport\\ST\\STM32F10x\\stm32f10x.h"
+
+
+ 
+
+
+
+ 
+ 
+
+
+
+
+
+
+#line 2208 "..\\Libraries\\CMSIS\\CM3\\DeviceSupport\\ST\\STM32F10x\\stm32f10x.h"
+
+ 
+
+
+
+
+
+
+#line 2232 "..\\Libraries\\CMSIS\\CM3\\DeviceSupport\\ST\\STM32F10x\\stm32f10x.h"
+
+ 
+
+
+
+
+
+
+#line 2249 "..\\Libraries\\CMSIS\\CM3\\DeviceSupport\\ST\\STM32F10x\\stm32f10x.h"
+
+ 
+
+
+
+
+
+
+#line 2266 "..\\Libraries\\CMSIS\\CM3\\DeviceSupport\\ST\\STM32F10x\\stm32f10x.h"
 
 #line 2273 "..\\Libraries\\CMSIS\\CM3\\DeviceSupport\\ST\\STM32F10x\\stm32f10x.h"
 
@@ -3372,7 +3453,25 @@ typedef struct
 
 
 
-#line 2685 "..\\Libraries\\CMSIS\\CM3\\DeviceSupport\\ST\\STM32F10x\\stm32f10x.h"
+
+ 
+
+
+ 
+
+
+ 
+
+
+ 
+
+
+ 
+
+
+ 
+
+
 
  
 
@@ -6171,7 +6270,219 @@ typedef struct
 
 
 
-#line 8287 "..\\Libraries\\CMSIS\\CM3\\DeviceSupport\\ST\\STM32F10x\\stm32f10x.h"
+
+ 
+ 
+ 
+ 
+#line 7907 "..\\Libraries\\CMSIS\\CM3\\DeviceSupport\\ST\\STM32F10x\\stm32f10x.h"
+
+ 
+#line 7923 "..\\Libraries\\CMSIS\\CM3\\DeviceSupport\\ST\\STM32F10x\\stm32f10x.h"
+
+ 
+
+
+ 
+
+
+ 
+#line 7939 "..\\Libraries\\CMSIS\\CM3\\DeviceSupport\\ST\\STM32F10x\\stm32f10x.h"
+  
+ 
+
+
+ 
+#line 7955 "..\\Libraries\\CMSIS\\CM3\\DeviceSupport\\ST\\STM32F10x\\stm32f10x.h"
+
+ 
+
+
+
+  
+
+
+ 
+
+
+
+
+
+
+
+
+ 
+
+  
+#line 7982 "..\\Libraries\\CMSIS\\CM3\\DeviceSupport\\ST\\STM32F10x\\stm32f10x.h"
+
+ 
+
+
+
+
+
+
+ 
+
+
+
+ 
+
+
+ 
+
+
+ 
+#line 8011 "..\\Libraries\\CMSIS\\CM3\\DeviceSupport\\ST\\STM32F10x\\stm32f10x.h"
+
+ 
+
+
+ 
+#line 8026 "..\\Libraries\\CMSIS\\CM3\\DeviceSupport\\ST\\STM32F10x\\stm32f10x.h"
+
+ 
+
+
+ 
+#line 8041 "..\\Libraries\\CMSIS\\CM3\\DeviceSupport\\ST\\STM32F10x\\stm32f10x.h"
+
+ 
+
+
+ 
+ 
+ 
+
+ 
+
+
+
+
+
+ 
+
+
+
+
+ 
+
+
+
+
+ 
+
+
+
+
+ 
+
+
+
+
+ 
+
+
+ 
+
+
+ 
+
+
+ 
+
+
+ 
+
+
+ 
+
+
+ 
+ 
+ 
+
+ 
+#line 8104 "..\\Libraries\\CMSIS\\CM3\\DeviceSupport\\ST\\STM32F10x\\stm32f10x.h"
+
+ 
+
+
+ 
+
+
+ 
+
+
+
+ 
+
+
+ 
+
+
+
+ 
+
+
+ 
+
+
+ 
+
+
+ 
+ 
+ 
+
+ 
+#line 8174 "..\\Libraries\\CMSIS\\CM3\\DeviceSupport\\ST\\STM32F10x\\stm32f10x.h"
+
+ 
+
+
+ 
+
+
+ 
+
+
+ 
+
+
+ 
+
+
+
+
+   
+#line 8225 "..\\Libraries\\CMSIS\\CM3\\DeviceSupport\\ST\\STM32F10x\\stm32f10x.h"
+
+ 
+#line 8251 "..\\Libraries\\CMSIS\\CM3\\DeviceSupport\\ST\\STM32F10x\\stm32f10x.h"
+
+ 
+#line 8268 "..\\Libraries\\CMSIS\\CM3\\DeviceSupport\\ST\\STM32F10x\\stm32f10x.h"
+
+ 
+
+
+
+
+
+ 
+
+
+ 
+
+
+ 
+
+
+ 
+
+
 
 
 
@@ -10582,9 +10893,13 @@ typedef struct
 
 
  
-#line 126 "..\\Libraries\\STM32F10x_StdPeriph_Driver\\inc\\stm32f10x_rcc.h"
+#line 135 "..\\Libraries\\STM32F10x_StdPeriph_Driver\\inc\\stm32f10x_rcc.h"
 
-#line 141 "..\\Libraries\\STM32F10x_StdPeriph_Driver\\inc\\stm32f10x_rcc.h"
+
+
+
+
+
 
 
  
@@ -10592,6 +10907,8 @@ typedef struct
 
 
  
+#line 165 "..\\Libraries\\STM32F10x_StdPeriph_Driver\\inc\\stm32f10x_rcc.h"
+
 #line 175 "..\\Libraries\\STM32F10x_StdPeriph_Driver\\inc\\stm32f10x_rcc.h"
 
 
@@ -10601,12 +10918,61 @@ typedef struct
 
 
  
+
+ 
+
+
+
 #line 196 "..\\Libraries\\STM32F10x_StdPeriph_Driver\\inc\\stm32f10x_rcc.h"
 
 
  
 
-#line 283 "..\\Libraries\\STM32F10x_StdPeriph_Driver\\inc\\stm32f10x_rcc.h"
+
+
+
+ 
+  
+#line 221 "..\\Libraries\\STM32F10x_StdPeriph_Driver\\inc\\stm32f10x_rcc.h"
+
+#line 230 "..\\Libraries\\STM32F10x_StdPeriph_Driver\\inc\\stm32f10x_rcc.h"
+
+
+ 
+
+
+
+
+ 
+  
+#line 248 "..\\Libraries\\STM32F10x_StdPeriph_Driver\\inc\\stm32f10x_rcc.h"
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+ 
+
+#line 272 "..\\Libraries\\STM32F10x_StdPeriph_Driver\\inc\\stm32f10x_rcc.h"
+
+
+
+
+
+
+
+
+ 
+
+
 
 
 
@@ -10649,6 +11015,21 @@ typedef struct
 
  
 
+#line 384 "..\\Libraries\\STM32F10x_StdPeriph_Driver\\inc\\stm32f10x_rcc.h"
+
+
+ 
+
+
+
+
+
+
+
+ 
+
+
+
 
 
 
@@ -10660,12 +11041,20 @@ typedef struct
 
 
 
+ 
+
+
 
  
-#line 396 "..\\Libraries\\STM32F10x_StdPeriph_Driver\\inc\\stm32f10x_rcc.h"
 
 
-#line 423 "..\\Libraries\\STM32F10x_StdPeriph_Driver\\inc\\stm32f10x_rcc.h"
+
+
+
+
+
+ 
+
   
 
 
@@ -10709,7 +11098,11 @@ typedef struct
 
 
 
-#line 489 "..\\Libraries\\STM32F10x_StdPeriph_Driver\\inc\\stm32f10x_rcc.h"
+#line 485 "..\\Libraries\\STM32F10x_StdPeriph_Driver\\inc\\stm32f10x_rcc.h"
+
+
+
+
 
 
  
@@ -10746,6 +11139,8 @@ typedef struct
 
 
 
+
+#line 579 "..\\Libraries\\STM32F10x_StdPeriph_Driver\\inc\\stm32f10x_rcc.h"
 
 #line 586 "..\\Libraries\\STM32F10x_StdPeriph_Driver\\inc\\stm32f10x_rcc.h"
 
@@ -10791,10 +11186,16 @@ void RCC_PLLConfig(uint32_t RCC_PLLSource, uint32_t RCC_PLLMul);
 void RCC_PLLCmd(FunctionalState NewState);
 
 
+ void RCC_PREDIV1Config(uint32_t RCC_PREDIV1_Source, uint32_t RCC_PREDIV1_Div);
 
 
 
-#line 666 "..\\Libraries\\STM32F10x_StdPeriph_Driver\\inc\\stm32f10x_rcc.h"
+ void RCC_PREDIV2Config(uint32_t RCC_PREDIV2_Div);
+ void RCC_PLL2Config(uint32_t RCC_PLL2Mul);
+ void RCC_PLL2Cmd(FunctionalState NewState);
+ void RCC_PLL3Config(uint32_t RCC_PLL3Mul);
+ void RCC_PLL3Cmd(FunctionalState NewState);
+
 
 void RCC_SYSCLKConfig(uint32_t RCC_SYSCLKSource);
 uint8_t RCC_GetSYSCLKSource(void);
@@ -10804,16 +11205,16 @@ void RCC_PCLK2Config(uint32_t RCC_HCLK);
 void RCC_ITConfig(uint8_t RCC_IT, FunctionalState NewState);
 
 
- void RCC_USBCLKConfig(uint32_t RCC_USBCLKSource);
 
 
+ void RCC_OTGFSCLKConfig(uint32_t RCC_OTGFSCLKSource);
 
 
 void RCC_ADCCLKConfig(uint32_t RCC_PCLK2);
 
 
-
-
+ void RCC_I2S2CLKConfig(uint32_t RCC_I2S2CLKSource);                                  
+ void RCC_I2S3CLKConfig(uint32_t RCC_I2S3CLKSource);
 
 
 void RCC_LSEConfig(uint8_t RCC_LSE);
@@ -10826,7 +11227,7 @@ void RCC_APB2PeriphClockCmd(uint32_t RCC_APB2Periph, FunctionalState NewState);
 void RCC_APB1PeriphClockCmd(uint32_t RCC_APB1Periph, FunctionalState NewState);
 
 
-
+void RCC_AHBPeriphResetCmd(uint32_t RCC_AHBPeriph, FunctionalState NewState);
 
 
 void RCC_APB2PeriphResetCmd(uint32_t RCC_APB2Periph, FunctionalState NewState);
@@ -13318,7 +13719,7 @@ void SysTick_CLKSourceConfig(uint32_t SysTick_CLKSource);
 
  
 #line 15 "..\\User\\main.c"
-#line 1 "D:\\keil\\ARM\\RV31\\INC\\stdio.h"
+#line 1 "C:\\Keil_v5\\ARM\\ARMCC\\Bin\\..\\include\\stdio.h"
  
  
  
@@ -13342,13 +13743,30 @@ void SysTick_CLKSourceConfig(uint32_t SysTick_CLKSource);
 
 
 
+ 
 
 
-#line 34 "D:\\keil\\ARM\\RV31\\INC\\stdio.h"
 
 
   
-  typedef unsigned int size_t;    
+ 
+
+
+
+
+
+
+
+
+#line 47 "C:\\Keil_v5\\ARM\\ARMCC\\Bin\\..\\include\\stdio.h"
+
+
+  
+
+
+
+    typedef unsigned int size_t;    
+
 
 
 
@@ -13361,7 +13779,11 @@ void SysTick_CLKSourceConfig(uint32_t SysTick_CLKSource);
  
 
  
-  typedef struct __va_list __va_list;
+
+
+
+    typedef struct __va_list __va_list;
+
 
 
 
@@ -13408,10 +13830,13 @@ typedef struct __FILE FILE;
 
  
 
+#line 136 "C:\\Keil_v5\\ARM\\ARMCC\\Bin\\..\\include\\stdio.h"
+
+
 extern FILE __stdin, __stdout, __stderr;
 extern FILE *__aeabi_stdin, *__aeabi_stdout, *__aeabi_stderr;
 
-#line 125 "D:\\keil\\ARM\\RV31\\INC\\stdio.h"
+#line 166 "C:\\Keil_v5\\ARM\\ARMCC\\Bin\\..\\include\\stdio.h"
     
 
     
@@ -14160,13 +14585,14 @@ extern __declspec(__nothrow) void __use_no_semihosting(void);
 
 
 
-#line 944 "D:\\keil\\ARM\\RV31\\INC\\stdio.h"
+#line 985 "C:\\Keil_v5\\ARM\\ARMCC\\Bin\\..\\include\\stdio.h"
 
 
 
  
+
 #line 16 "..\\User\\main.c"
-#line 1 "D:\\keil\\ARM\\RV31\\INC\\string.h"
+#line 1 "C:\\Keil_v5\\ARM\\ARMCC\\Bin\\..\\include\\string.h"
  
  
  
@@ -14196,15 +14622,16 @@ extern __declspec(__nothrow) void __use_no_semihosting(void);
 
 
 
-#line 37 "D:\\keil\\ARM\\RV31\\INC\\string.h"
+
+#line 38 "C:\\Keil_v5\\ARM\\ARMCC\\Bin\\..\\include\\string.h"
 
 
   
-  typedef unsigned int size_t;
 
 
 
-
+    typedef unsigned int size_t;    
+#line 54 "C:\\Keil_v5\\ARM\\ARMCC\\Bin\\..\\include\\string.h"
 
 
 
@@ -14338,7 +14765,7 @@ extern __declspec(__nothrow) size_t strxfrm(char * __restrict  , const char * __
  
 
 
-#line 184 "D:\\keil\\ARM\\RV31\\INC\\string.h"
+#line 193 "C:\\Keil_v5\\ARM\\ARMCC\\Bin\\..\\include\\string.h"
 extern __declspec(__nothrow) void *memchr(const void *  , int  , size_t  ) __attribute__((__nonnull__(1)));
 
    
@@ -14349,7 +14776,7 @@ extern __declspec(__nothrow) void *memchr(const void *  , int  , size_t  ) __att
 
  
 
-#line 200 "D:\\keil\\ARM\\RV31\\INC\\string.h"
+#line 209 "C:\\Keil_v5\\ARM\\ARMCC\\Bin\\..\\include\\string.h"
 extern __declspec(__nothrow) char *strchr(const char *  , int  ) __attribute__((__nonnull__(1)));
 
    
@@ -14367,7 +14794,7 @@ extern __declspec(__nothrow) size_t strcspn(const char *  , const char *  ) __at
 
  
 
-#line 223 "D:\\keil\\ARM\\RV31\\INC\\string.h"
+#line 232 "C:\\Keil_v5\\ARM\\ARMCC\\Bin\\..\\include\\string.h"
 extern __declspec(__nothrow) char *strpbrk(const char *  , const char *  ) __attribute__((__nonnull__(1,2)));
 
    
@@ -14377,7 +14804,7 @@ extern __declspec(__nothrow) char *strpbrk(const char *  , const char *  ) __att
 
  
 
-#line 238 "D:\\keil\\ARM\\RV31\\INC\\string.h"
+#line 247 "C:\\Keil_v5\\ARM\\ARMCC\\Bin\\..\\include\\string.h"
 extern __declspec(__nothrow) char *strrchr(const char *  , int  ) __attribute__((__nonnull__(1)));
 
    
@@ -14395,7 +14822,7 @@ extern __declspec(__nothrow) size_t strspn(const char *  , const char *  ) __att
 
  
 
-#line 261 "D:\\keil\\ARM\\RV31\\INC\\string.h"
+#line 270 "C:\\Keil_v5\\ARM\\ARMCC\\Bin\\..\\include\\string.h"
 extern __declspec(__nothrow) char *strstr(const char *  , const char *  ) __attribute__((__nonnull__(1,2)));
 
    
@@ -14581,11 +15008,12 @@ extern __declspec(__nothrow) void _membitmovewb(void *  , const void *  , int  ,
 
 
 
-#line 493 "D:\\keil\\ARM\\RV31\\INC\\string.h"
+#line 502 "C:\\Keil_v5\\ARM\\ARMCC\\Bin\\..\\include\\string.h"
 
 
 
  
+
 #line 17 "..\\User\\main.c"
  
 #line 1 "..\\FreeRTOS\\Source\\include\\FreeRTOS.h"
@@ -14664,7 +15092,7 @@ extern __declspec(__nothrow) void _membitmovewb(void *  , const void *  , int  ,
 
 
  
-#line 1 "D:\\keil\\ARM\\RV31\\INC\\stddef.h"
+#line 1 "C:\\Keil_v5\\ARM\\ARMCC\\Bin\\..\\include\\stddef.h"
  
 
 
@@ -14687,18 +15115,22 @@ extern __declspec(__nothrow) void _membitmovewb(void *  , const void *  , int  ,
 
 
 
-#line 33 "D:\\keil\\ARM\\RV31\\INC\\stddef.h"
 
-typedef signed int ptrdiff_t;
+#line 34 "C:\\Keil_v5\\ARM\\ARMCC\\Bin\\..\\include\\stddef.h"
+
+
+
+
+  typedef signed int ptrdiff_t;
+
 
 
   
-  typedef unsigned int size_t;
 
 
 
-
-
+    typedef unsigned int size_t;    
+#line 57 "C:\\Keil_v5\\ARM\\ARMCC\\Bin\\..\\include\\stddef.h"
 
 
 
@@ -14707,11 +15139,14 @@ typedef signed int ptrdiff_t;
 
 
       typedef unsigned short wchar_t;  
-#line 69 "D:\\keil\\ARM\\RV31\\INC\\stddef.h"
+#line 82 "C:\\Keil_v5\\ARM\\ARMCC\\Bin\\..\\include\\stddef.h"
 
 
 
     
+
+
+
 
    
 
@@ -14723,11 +15158,13 @@ typedef signed int ptrdiff_t;
 
 
 
-#line 90 "D:\\keil\\ARM\\RV31\\INC\\stddef.h"
+
+#line 107 "C:\\Keil_v5\\ARM\\ARMCC\\Bin\\..\\include\\stddef.h"
 
 
 
  
+
 #line 77 "..\\FreeRTOS\\Source\\include\\FreeRTOS.h"
 
 
@@ -21858,7 +22295,7 @@ void RCC_Configuration(void)
     FLASH_PrefetchBufferCmd(((uint32_t)0x00000010));
 
      
-    RCC_PLLConfig(((uint32_t)0x00010000), ((uint32_t)0x001C0000));
+    
 
       
     RCC_PLLCmd(ENABLE);

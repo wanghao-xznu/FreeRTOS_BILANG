@@ -68,7 +68,7 @@
 
  
 
-#line 1 "D:\\keil\\ARM\\RV31\\INC\\stdlib.h"
+#line 1 "C:\\Keil_v5\\ARM\\ARMCC\\Bin\\..\\include\\stdlib.h"
  
  
  
@@ -82,6 +82,15 @@
 
 
  
+
+
+
+
+
+
+   
+
+
 
 
 
@@ -106,15 +115,15 @@
 
 
 
-#line 45 "D:\\keil\\ARM\\RV31\\INC\\stdlib.h"
+#line 54 "C:\\Keil_v5\\ARM\\ARMCC\\Bin\\..\\include\\stdlib.h"
 
 
   
-  typedef unsigned int size_t;
 
 
 
-
+    typedef unsigned int size_t;    
+#line 70 "C:\\Keil_v5\\ARM\\ARMCC\\Bin\\..\\include\\stdlib.h"
 
 
 
@@ -126,18 +135,18 @@
 
 
     typedef unsigned short wchar_t;  
-#line 74 "D:\\keil\\ARM\\RV31\\INC\\stdlib.h"
+#line 91 "C:\\Keil_v5\\ARM\\ARMCC\\Bin\\..\\include\\stdlib.h"
 
 typedef struct div_t { int quot, rem; } div_t;
     
 typedef struct ldiv_t { long int quot, rem; } ldiv_t;
     
 
-typedef struct lldiv_t { __int64 quot, rem; } lldiv_t;
+typedef struct lldiv_t { long long quot, rem; } lldiv_t;
     
 
 
-#line 95 "D:\\keil\\ARM\\RV31\\INC\\stdlib.h"
+#line 112 "C:\\Keil_v5\\ARM\\ARMCC\\Bin\\..\\include\\stdlib.h"
    
 
 
@@ -150,7 +159,7 @@ typedef struct lldiv_t { __int64 quot, rem; } lldiv_t;
 
 
  
-#line 114 "D:\\keil\\ARM\\RV31\\INC\\stdlib.h"
+#line 131 "C:\\Keil_v5\\ARM\\ARMCC\\Bin\\..\\include\\stdlib.h"
    
 
 
@@ -193,7 +202,7 @@ extern __declspec(__nothrow) long int atol(const char *  ) __attribute__((__nonn
 
  
 
-extern __declspec(__nothrow) __int64 atoll(const char *  ) __attribute__((__nonnull__(1)));
+extern __declspec(__nothrow) long long atoll(const char *  ) __attribute__((__nonnull__(1)));
    
 
 
@@ -291,16 +300,18 @@ extern __declspec(__nothrow) unsigned long int strtoul(const char * __restrict  
  
 
  
-extern __declspec(__nothrow) __int64 strtoll(const char * __restrict  ,
-                               char ** __restrict  , int  ) __attribute__((__nonnull__(1)));
+extern __declspec(__nothrow) long long strtoll(const char * __restrict  ,
+                                  char ** __restrict  , int  )
+                          __attribute__((__nonnull__(1)));
    
 
 
 
 
  
-extern __declspec(__nothrow) unsigned __int64 strtoull(const char * __restrict  ,
-                                         char ** __restrict  , int  ) __attribute__((__nonnull__(1)));
+extern __declspec(__nothrow) unsigned long long strtoull(const char * __restrict  ,
+                                            char ** __restrict  , int  )
+                                   __attribute__((__nonnull__(1)));
    
 
 
@@ -441,7 +452,7 @@ extern __declspec(__nothrow) int atexit(void (*  )(void)) __attribute__((__nonnu
 
 
  
-#line 414 "D:\\keil\\ARM\\RV31\\INC\\stdlib.h"
+#line 436 "C:\\Keil_v5\\ARM\\ARMCC\\Bin\\..\\include\\stdlib.h"
 
 
 extern __declspec(__nothrow) __declspec(__noreturn) void exit(int  );
@@ -514,7 +525,7 @@ extern  void *bsearch(const void *  , const void *  ,
 
 
  
-#line 502 "D:\\keil\\ARM\\RV31\\INC\\stdlib.h"
+#line 524 "C:\\Keil_v5\\ARM\\ARMCC\\Bin\\..\\include\\stdlib.h"
 
 
 extern  void qsort(void *  , size_t  , size_t  ,
@@ -531,38 +542,16 @@ extern  void qsort(void *  , size_t  , size_t  ,
 
  
 
-#line 531 "D:\\keil\\ARM\\RV31\\INC\\stdlib.h"
+#line 553 "C:\\Keil_v5\\ARM\\ARMCC\\Bin\\..\\include\\stdlib.h"
 
-extern __declspec(__nothrow) __pure int abs(int  );
+extern __declspec(__nothrow) __attribute__((const)) int abs(int  );
    
 
 
 
  
 
-extern __declspec(__nothrow) __pure div_t div(int  , int  );
-   
-
-
-
-
-
-
-
-
-
- 
-extern __declspec(__nothrow) __pure long int labs(long int  );
-   
-
-
-
- 
-
-
-
-
-extern __declspec(__nothrow) __pure ldiv_t ldiv(long int  , long int  );
+extern __declspec(__nothrow) __attribute__((const)) div_t div(int  , int  );
    
 
 
@@ -573,17 +562,8 @@ extern __declspec(__nothrow) __pure ldiv_t ldiv(long int  , long int  );
 
 
 
-
-
  
-
-
-
-
-
-
-
-extern __declspec(__nothrow) __pure __int64 llabs(__int64  );
+extern __declspec(__nothrow) __attribute__((const)) long int labs(long int  );
    
 
 
@@ -593,7 +573,7 @@ extern __declspec(__nothrow) __pure __int64 llabs(__int64  );
 
 
 
-extern __declspec(__nothrow) __pure lldiv_t lldiv(__int64  , __int64  );
+extern __declspec(__nothrow) __attribute__((const)) ldiv_t ldiv(long int  , long int  );
    
 
 
@@ -607,7 +587,39 @@ extern __declspec(__nothrow) __pure lldiv_t lldiv(__int64  , __int64  );
 
 
  
-#line 612 "D:\\keil\\ARM\\RV31\\INC\\stdlib.h"
+
+
+
+
+
+
+
+extern __declspec(__nothrow) __attribute__((const)) long long llabs(long long  );
+   
+
+
+
+ 
+
+
+
+
+extern __declspec(__nothrow) __attribute__((const)) lldiv_t lldiv(long long  , long long  );
+   
+
+
+
+
+
+
+
+
+
+
+
+ 
+#line 634 "C:\\Keil_v5\\ARM\\ARMCC\\Bin\\..\\include\\stdlib.h"
+
 
 
 
@@ -617,24 +629,25 @@ typedef struct __udiv32by16 { unsigned int quot, rem; } __udiv32by16;
     
 typedef struct __sdiv64by32 { int rem, quot; } __sdiv64by32;
 
-__value_in_regs extern __declspec(__nothrow) __pure __sdiv32by16 __rt_sdiv32by16(
+__value_in_regs extern __declspec(__nothrow) __attribute__((const)) __sdiv32by16 __rt_sdiv32by16(
      int  ,
      short int  );
    
 
  
-__value_in_regs extern __declspec(__nothrow) __pure __udiv32by16 __rt_udiv32by16(
+__value_in_regs extern __declspec(__nothrow) __attribute__((const)) __udiv32by16 __rt_udiv32by16(
      unsigned int  ,
      unsigned short  );
    
 
  
-__value_in_regs extern __declspec(__nothrow) __pure __sdiv64by32 __rt_sdiv64by32(
+__value_in_regs extern __declspec(__nothrow) __attribute__((const)) __sdiv64by32 __rt_sdiv64by32(
      int  , unsigned int  ,
      int  );
    
 
  
+
 
 
 
@@ -785,12 +798,15 @@ extern __declspec(__nothrow) int __C_library_version_number(void);
 
 
 
-#line 866 "D:\\keil\\ARM\\RV31\\INC\\stdlib.h"
+#line 892 "C:\\Keil_v5\\ARM\\ARMCC\\Bin\\..\\include\\stdlib.h"
+
+
+
 
 
  
 #line 71 "..\\FreeRTOS\\Source\\queue.c"
-#line 1 "D:\\keil\\ARM\\RV31\\INC\\string.h"
+#line 1 "C:\\Keil_v5\\ARM\\ARMCC\\Bin\\..\\include\\string.h"
  
  
  
@@ -820,15 +836,16 @@ extern __declspec(__nothrow) int __C_library_version_number(void);
 
 
 
-#line 37 "D:\\keil\\ARM\\RV31\\INC\\string.h"
+
+#line 38 "C:\\Keil_v5\\ARM\\ARMCC\\Bin\\..\\include\\string.h"
 
 
   
-  typedef unsigned int size_t;
 
 
 
-
+    typedef unsigned int size_t;    
+#line 54 "C:\\Keil_v5\\ARM\\ARMCC\\Bin\\..\\include\\string.h"
 
 
 
@@ -962,7 +979,7 @@ extern __declspec(__nothrow) size_t strxfrm(char * __restrict  , const char * __
  
 
 
-#line 184 "D:\\keil\\ARM\\RV31\\INC\\string.h"
+#line 193 "C:\\Keil_v5\\ARM\\ARMCC\\Bin\\..\\include\\string.h"
 extern __declspec(__nothrow) void *memchr(const void *  , int  , size_t  ) __attribute__((__nonnull__(1)));
 
    
@@ -973,7 +990,7 @@ extern __declspec(__nothrow) void *memchr(const void *  , int  , size_t  ) __att
 
  
 
-#line 200 "D:\\keil\\ARM\\RV31\\INC\\string.h"
+#line 209 "C:\\Keil_v5\\ARM\\ARMCC\\Bin\\..\\include\\string.h"
 extern __declspec(__nothrow) char *strchr(const char *  , int  ) __attribute__((__nonnull__(1)));
 
    
@@ -991,7 +1008,7 @@ extern __declspec(__nothrow) size_t strcspn(const char *  , const char *  ) __at
 
  
 
-#line 223 "D:\\keil\\ARM\\RV31\\INC\\string.h"
+#line 232 "C:\\Keil_v5\\ARM\\ARMCC\\Bin\\..\\include\\string.h"
 extern __declspec(__nothrow) char *strpbrk(const char *  , const char *  ) __attribute__((__nonnull__(1,2)));
 
    
@@ -1001,7 +1018,7 @@ extern __declspec(__nothrow) char *strpbrk(const char *  , const char *  ) __att
 
  
 
-#line 238 "D:\\keil\\ARM\\RV31\\INC\\string.h"
+#line 247 "C:\\Keil_v5\\ARM\\ARMCC\\Bin\\..\\include\\string.h"
 extern __declspec(__nothrow) char *strrchr(const char *  , int  ) __attribute__((__nonnull__(1)));
 
    
@@ -1019,7 +1036,7 @@ extern __declspec(__nothrow) size_t strspn(const char *  , const char *  ) __att
 
  
 
-#line 261 "D:\\keil\\ARM\\RV31\\INC\\string.h"
+#line 270 "C:\\Keil_v5\\ARM\\ARMCC\\Bin\\..\\include\\string.h"
 extern __declspec(__nothrow) char *strstr(const char *  , const char *  ) __attribute__((__nonnull__(1,2)));
 
    
@@ -1205,11 +1222,12 @@ extern __declspec(__nothrow) void _membitmovewb(void *  , const void *  , int  ,
 
 
 
-#line 493 "D:\\keil\\ARM\\RV31\\INC\\string.h"
+#line 502 "C:\\Keil_v5\\ARM\\ARMCC\\Bin\\..\\include\\string.h"
 
 
 
  
+
 #line 72 "..\\FreeRTOS\\Source\\queue.c"
 
 
@@ -1293,7 +1311,7 @@ extern __declspec(__nothrow) void _membitmovewb(void *  , const void *  , int  ,
 
 
  
-#line 1 "D:\\keil\\ARM\\RV31\\INC\\stddef.h"
+#line 1 "C:\\Keil_v5\\ARM\\ARMCC\\Bin\\..\\include\\stddef.h"
  
 
 
@@ -1316,18 +1334,22 @@ extern __declspec(__nothrow) void _membitmovewb(void *  , const void *  , int  ,
 
 
 
-#line 33 "D:\\keil\\ARM\\RV31\\INC\\stddef.h"
 
-typedef signed int ptrdiff_t;
+#line 34 "C:\\Keil_v5\\ARM\\ARMCC\\Bin\\..\\include\\stddef.h"
+
+
+
+
+  typedef signed int ptrdiff_t;
+
 
 
   
-  typedef unsigned int size_t;
 
 
 
-
-
+    typedef unsigned int size_t;    
+#line 57 "C:\\Keil_v5\\ARM\\ARMCC\\Bin\\..\\include\\stddef.h"
 
 
 
@@ -1336,11 +1358,14 @@ typedef signed int ptrdiff_t;
 
 
       typedef unsigned short wchar_t;  
-#line 69 "D:\\keil\\ARM\\RV31\\INC\\stddef.h"
+#line 82 "C:\\Keil_v5\\ARM\\ARMCC\\Bin\\..\\include\\stddef.h"
 
 
 
     
+
+
+
 
    
 
@@ -1352,11 +1377,13 @@ typedef signed int ptrdiff_t;
 
 
 
-#line 90 "D:\\keil\\ARM\\RV31\\INC\\stddef.h"
+
+#line 107 "C:\\Keil_v5\\ARM\\ARMCC\\Bin\\..\\include\\stddef.h"
 
 
 
  
+
 #line 77 "..\\FreeRTOS\\Source\\include\\FreeRTOS.h"
 
 
@@ -1372,7 +1399,7 @@ typedef signed int ptrdiff_t;
 
 
  
-#line 1 "D:\\keil\\ARM\\RV31\\INC\\stdint.h"
+#line 1 "C:\\Keil_v5\\ARM\\ARMCC\\Bin\\..\\include\\stdint.h"
  
  
 
@@ -1390,9 +1417,21 @@ typedef signed int ptrdiff_t;
 
 
 
-#line 25 "D:\\keil\\ARM\\RV31\\INC\\stdint.h"
+     
+#line 27 "C:\\Keil_v5\\ARM\\ARMCC\\Bin\\..\\include\\stdint.h"
+     
 
 
+
+
+
+
+
+
+
+
+
+#line 46 "C:\\Keil_v5\\ARM\\ARMCC\\Bin\\..\\include\\stdint.h"
 
 
 
@@ -1444,32 +1483,17 @@ typedef unsigned           int uint_fast32_t;
 typedef unsigned       __int64 uint_fast64_t;
 
      
+
+
+
+
 typedef   signed           int intptr_t;
 typedef unsigned           int uintptr_t;
 
-     
-typedef   signed       __int64 intmax_t;
-typedef unsigned       __int64 uintmax_t;
-
-
-
 
      
-
-     
-
-
-
-
-
-     
-
-
-
-
-
-     
-
+typedef   signed     long long intmax_t;
+typedef unsigned     long long uintmax_t;
 
 
 
@@ -1519,6 +1543,46 @@ typedef unsigned       __int64 uintmax_t;
      
 
 
+
+
+
+     
+
+
+
+
+
+     
+
+
+
+
+
+     
+
+     
+
+
+
+
+
+
+     
+
+
+
+
+
+
+     
+
+
+
+
+
+
+     
+
      
 
 
@@ -1527,16 +1591,11 @@ typedef unsigned       __int64 uintmax_t;
 
      
 
-     
-
 
      
 
-
      
-
-
-     
+#line 216 "C:\\Keil_v5\\ARM\\ARMCC\\Bin\\..\\include\\stdint.h"
 
      
 
@@ -1546,7 +1605,7 @@ typedef unsigned       __int64 uintmax_t;
 
 
 
-     
+
 
 
      
@@ -1555,7 +1614,7 @@ typedef unsigned       __int64 uintmax_t;
 
 
 
-#line 196 "D:\\keil\\ARM\\RV31\\INC\\stdint.h"
+#line 241 "C:\\Keil_v5\\ARM\\ARMCC\\Bin\\..\\include\\stdint.h"
 
      
 
@@ -1588,13 +1647,14 @@ typedef unsigned       __int64 uintmax_t;
 
 
 
-#line 260 "D:\\keil\\ARM\\RV31\\INC\\stdint.h"
+#line 305 "C:\\Keil_v5\\ARM\\ARMCC\\Bin\\..\\include\\stdint.h"
+
+
+
 
 
 
  
-
-
 #line 92 "..\\FreeRTOS\\Source\\include\\FreeRTOS.h"
 
 
