@@ -32,10 +32,12 @@ void USART_Configuration(void);
 void UART1Write(u8* data,u16 len);
 void UART1_SendByte(u16 Data);
 void Receive_TimeOut(xTimerHandle handle);
+void Updata_TimeOut(xTimerHandle handle);
 
 xQueueHandle MsgQueue;
 xQueueHandle CmdMsg;
 xTimerHandle Receive_Timer = NULL;
+xTimerHandle Updata_Timer = NULL;
 static void prvSetupHardware( void );
 void TaskA( void *pvParameters );
 void TaskB( void *pvParameters );
@@ -54,13 +56,16 @@ int main(void)
 	/* create sw timer, 2s */
     Receive_Timer = xTimerCreate((const char*)"ReceiveTimer",\
                         20 / portTICK_RATE_MS, pdFALSE, NULL, Receive_TimeOut);
+		
+		Updata_Timer = xTimerCreate((const char*)"UpdataTimer",\
+                        1000 / portTICK_RATE_MS, pdTRUE, NULL, Updata_TimeOut);
 	/* ½¨Á¢¶ÓÁÐ */
     MsgQueue = xQueueCreate( 5 , sizeof( int16_t ) );
-	CmdMsg   = xQueueCreate( 5 , sizeof( int16_t ) );
+		CmdMsg   = xQueueCreate( 5 , sizeof( int16_t ) );
     /* ½¨Á¢ÈÎÎñ */
-    xTaskCreate( TaskA, ( signed portCHAR * ) "TaskA", configMINIMAL_STACK_SIZE,
+    xTaskCreate( TaskA, "TaskA", configMINIMAL_STACK_SIZE,
                             NULL, tskIDLE_PRIORITY+3, NULL );
-    xTaskCreate( TaskB, ( signed portCHAR * ) "TaskB", configMINIMAL_STACK_SIZE,
+    xTaskCreate( TaskB, "TaskB", configMINIMAL_STACK_SIZE,
                             NULL, tskIDLE_PRIORITY+4, NULL );
     /* Æô¶¯OS */
     vTaskStartScheduler();
@@ -80,17 +85,34 @@ void Receive_TimeOut(xTimerHandle handle) //20msµÄtimeout£¬Ê±¼äµ½ÁË½«½ÓÊÕµÄ×Ö·û´
 
 	if(strcmp(USART_RX_BUF,"start")==0)
 	{
-		 printf("\r\n =========line = %d======%s====\r\n",__LINE__,__FILE__);
+		 //printf("\r\n =========line = %d======%s====\r\n",__LINE__,__FILE__);
+			xTimerStart(Updata_Timer, 0);
 	}
 	if(strcmp(USART_RX_BUF,"stop")==0)
 	{
-		 printf("\r\n =========line = %d======%s====\r\n",__LINE__,__FILE__);
+		 //printf("\r\n =========line = %d======%s====\r\n",__LINE__,__FILE__);
+			xTimerStop(Updata_Timer, 0);	
 	}
 
 	index_receive = 0;
 	memset(USART_RX_BUF,0,USART_REC_LEN*sizeof(char));
     return;
 }
+
+void Updata_TimeOut(xTimerHandle handle) //20msµÄtimeout£¬Ê±¼äµ½ÁË½«½ÓÊÕµÄ×Ö·û´®ÍÂ³ö
+{
+		printf("\r\n =========line = %d======%s====\r\n",__LINE__,__FILE__);
+    return;
+}
+
+
+
+
+
+
+
+
+
 
 #ifdef  USE_FULL_ASSERT
 /*******************************************************************************
@@ -119,6 +141,7 @@ void assert_failed(uint8_t* file, uint32_t line)
 *******************************************************************************/
 void RCC_Configuration(void)
 {
+	#if 0
   /* RCC system reset(for debug purpose) */
   RCC_DeInit();
 
@@ -145,7 +168,7 @@ void RCC_Configuration(void)
     FLASH_PrefetchBufferCmd(FLASH_PrefetchBuffer_Enable);
 
     /* PLLCLK = 8MHz * 9 = 72 MHz */
-    //RCC_PLLConfig(RCC_PLLSource_HSE_Div1, RCC_PLLMul_9);
+    //RCC_PLLConfig(RCC_PLLSource_PREDIV1, RCC_PLLMul_9);
 
     /* Enable PLL */ 
     RCC_PLLCmd(ENABLE);
@@ -163,7 +186,7 @@ void RCC_Configuration(void)
     {
     }
   }
-   
+   #endif
   /* Enable USART1 and GPIOA clock */
   RCC_APB2PeriphClockCmd(RCC_APB2Periph_USART1 | RCC_APB2Periph_GPIOA, ENABLE);
 }

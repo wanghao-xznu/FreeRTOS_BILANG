@@ -14,6 +14,13 @@
 #define USART_REC_LEN 64  
 
 extern xTimerHandle Receive_Timer;
+extern xTimerHandle Updata_Timer;
+	 
+typedef struct {                     
+int Current_Time;
+int Current_Temperature;
+int Current_Power;
+} Running_Message;
 
 
 
